@@ -1,0 +1,6 @@
+framework module Pods_techtogether {
+  umbrella header "Pods-techtogether-umbrella.h"
+
+  export *
+  module * { export * }
+}
