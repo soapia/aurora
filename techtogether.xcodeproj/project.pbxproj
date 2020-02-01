@@ -20,6 +20,13 @@
 		D92EF5AC23E557CE00326A89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5AB23E557CE00326A89 /* LoginViewController.swift */; };
 		D92EF5AE23E558AF00326A89 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5AD23E558AF00326A89 /* SignUpViewController.swift */; };
 		D92EF5B023E558C700326A89 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5AF23E558C700326A89 /* HomeViewController.swift */; };
+		D92EF5B223E5CC3100326A89 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5B123E5CC3100326A89 /* TabBarViewController.swift */; };
+		D92EF5B423E5D2E900326A89 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5B323E5D2E900326A89 /* SettingsViewController.swift */; };
+		D92EF5B623E5D78800326A89 /* Aurora.png in Resources */ = {isa = PBXBuildFile; fileRef = D92EF5B523E5D78800326A89 /* Aurora.png */; };
+		D92EF5BA23E5DB8500326A89 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5B923E5DB8500326A89 /* RoundButton.swift */; };
+		D92EF5BC23E5E5AA00326A89 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D92EF5BB23E5E5A900326A89 /* logo.png */; };
+		D92EF5C023E60D2300326A89 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92EF5BF23E60D2300326A89 /* Data.swift */; };
+		D92EF5C223E611E300326A89 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = D92EF5C123E611E300326A89 /* pin.png */; };
 		FB9BF0D743636237CF0EBA32 /* Pods_techtogetherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EFAC55267D0CE66C68CE /* Pods_techtogetherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +62,13 @@
 		D92EF5AB23E557CE00326A89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D92EF5AD23E558AF00326A89 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D92EF5AF23E558C700326A89 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D92EF5B123E5CC3100326A89 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D92EF5B323E5D2E900326A89 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D92EF5B523E5D78800326A89 /* Aurora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Aurora.png; path = ../../../../Downloads/Aurora.png; sourceTree = "<group>"; };
+		D92EF5B923E5DB8500326A89 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		D92EF5BB23E5E5A900326A89 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
+		D92EF5BF23E60D2300326A89 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D92EF5C123E611E300326A89 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = ../../../../Downloads/pin.png; sourceTree = "<group>"; };
 		E2A3EFAC55267D0CE66C68CE /* Pods_techtogetherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_techtogetherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,8 +140,15 @@
 				D92EF58423E5451500326A89 /* StartViewController.swift */,
 				D92EF5AB23E557CE00326A89 /* LoginViewController.swift */,
 				D92EF5AD23E558AF00326A89 /* SignUpViewController.swift */,
+				D92EF5B123E5CC3100326A89 /* TabBarViewController.swift */,
 				D92EF5AF23E558C700326A89 /* HomeViewController.swift */,
+				D92EF5C123E611E300326A89 /* pin.png */,
+				D92EF5BF23E60D2300326A89 /* Data.swift */,
+				D92EF5B523E5D78800326A89 /* Aurora.png */,
+				D92EF5BB23E5E5A900326A89 /* logo.png */,
 				D92EF58623E5451500326A89 /* Main.storyboard */,
+				D92EF5B923E5DB8500326A89 /* RoundButton.swift */,
+				D92EF5B323E5D2E900326A89 /* SettingsViewController.swift */,
 				D92EF58C23E5451600326A89 /* Assets.xcassets */,
 				D92EF58E23E5451600326A89 /* LaunchScreen.storyboard */,
 				D92EF59123E5451600326A89 /* Info.plist */,
@@ -230,7 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92EF5B623E5D78800326A89 /* Aurora.png in Resources */,
 				D92EF59023E5451600326A89 /* LaunchScreen.storyboard in Resources */,
+				D92EF5BC23E5E5AA00326A89 /* logo.png in Resources */,
+				D92EF5C223E611E300326A89 /* pin.png in Resources */,
 				D92EF5AA23E54FCE00326A89 /* GoogleService-Info.plist in Resources */,
 				D92EF58D23E5451600326A89 /* Assets.xcassets in Resources */,
 				D92EF58823E5451500326A89 /* Main.storyboard in Resources */,
@@ -315,13 +339,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92EF5B223E5CC3100326A89 /* TabBarViewController.swift in Sources */,
 				D92EF5AE23E558AF00326A89 /* SignUpViewController.swift in Sources */,
 				D92EF58523E5451500326A89 /* StartViewController.swift in Sources */,
 				D92EF58123E5451500326A89 /* AppDelegate.swift in Sources */,
+				D92EF5C023E60D2300326A89 /* Data.swift in Sources */,
 				D92EF58323E5451500326A89 /* SceneDelegate.swift in Sources */,
 				D92EF5AC23E557CE00326A89 /* LoginViewController.swift in Sources */,
+				D92EF5BA23E5DB8500326A89 /* RoundButton.swift in Sources */,
 				D92EF5B023E558C700326A89 /* HomeViewController.swift in Sources */,
 				D92EF58B23E5451500326A89 /* techtogether.xcdatamodeld in Sources */,
+				D92EF5B423E5D2E900326A89 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

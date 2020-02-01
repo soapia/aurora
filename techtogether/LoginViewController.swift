@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Aurora.png")!)
         // Do any additional setup after loading the view.
     }
     
