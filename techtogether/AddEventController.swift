@@ -18,11 +18,15 @@ class AddEventController: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = false
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
     @IBAction func addEventPressed(_ sender: UIButton) {
         
@@ -74,9 +78,9 @@ class AddEventController: UIViewController {
                     }
                 }
             }
-            
-        //add an alert to confirm that their case had been reported to nearby professionals/helpers
-            
+            self.navigationController?.isNavigationBarHidden = true
+            let _ = navigationController?.popViewController(animated: true)
+
         } 
     
 }

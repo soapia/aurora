@@ -9,6 +9,8 @@ target 'techtogether' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 
 
 
