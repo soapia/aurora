@@ -24,9 +24,9 @@ class customPin: NSObject, MKAnnotation {
 class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     
     let data = Data().locations
-    var locData: [[String : Any]] = []
+//    var locData: [[String : Any]] = []
     var mapAnnotations = [customPin]()
-    var imageChoice = "pin"
+    var imageChoice = "pin.png"
     
     
     var locationManager = CLLocationManager()
@@ -52,20 +52,24 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
     }
     func addPlaces() {
-        self.mapView.removeAnnotations(mapAnnotations)
-        mapAnnotations.removeAll()
-        for dictionary in locData {
+        //self.mapView.removeAnnotations(mapAnnotations)
+        //mapAnnotations.removeAll()
+        for dictionary in data {
+            // print(dictionary)
             let latitude = CLLocationDegrees(dictionary["latitude"] as! Double)
             let longitude = CLLocationDegrees(dictionary["longitude"] as! Double)
             let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             let name = dictionary["name"] as! String
             // let mediaURL = dictionary["mediaURL"] as! String
             let pin = customPin(pinTitle: name, pinSubTitle: "", location: coordinate)
+            print(pin)
             mapAnnotations.append(pin)
-            // self.mapView.addAnnotation(pin)
+            print("LOOOOOOOOOK")
+            self.mapView.addAnnotation(pin)
         }
+        // print(mapAnnotations)
         self.mapView.addAnnotations(mapAnnotations)
-        // imageChoice = "pin2"
+        imageChoice = "pin.png"
     }
     var pinSelected = false
     var phoneNum = ""
