@@ -216,9 +216,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWz-o3-2vT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3830.434782608696" y="415.84821428571428"/>
+            <point key="canvasLocation" x="3829" y="1090"/>
         </scene>
-        <!--Item 1-->
+        <!--MAPS-->
         <scene sceneID="Ttb-Er-BFu">
             <objects>
                 <viewController id="ei3-B7-31S" customClass="HomeViewController" customModule="techtogether" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,7 +324,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0FN-Hf-3qL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="IXq-0c-ODp"/>
+                    <tabBarItem key="tabBarItem" title="MAPS" id="IXq-0c-ODp"/>
                     <connections>
                         <outlet property="locationTitle" destination="Ceh-Xg-9ql" id="9M5-fi-NAg"/>
                         <outlet property="mapView" destination="d0V-MQ-nMW" id="cpG-ww-tPu"/>
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itv-2V-jjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3830.434782608696" y="-230.35714285714283"/>
+            <point key="canvasLocation" x="3830" y="-860"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aw7-la-ift">
@@ -346,11 +346,107 @@
                     <connections>
                         <segue destination="ei3-B7-31S" kind="relationship" relationship="viewControllers" id="4PS-yx-6rb"/>
                         <segue destination="008-qZ-3M4" kind="relationship" relationship="viewControllers" id="d2t-7S-FAw"/>
+                        <segue destination="99T-5K-Kdf" kind="relationship" relationship="viewControllers" id="x0L-XT-i2q"/>
+                        <segue destination="BCg-5P-3Hm" kind="relationship" relationship="viewControllers" id="99a-8u-q0w"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jE-3k-21c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2913.04347826087" y="91.741071428571431"/>
+        </scene>
+        <!--VIEW REPORTS-->
+        <scene sceneID="xq0-bc-ubU">
+            <objects>
+                <viewController id="BCg-5P-3Hm" customClass="EventsController" customModule="techtogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CBC-6H-KEa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tw3-5i-k6b">
+                                <rect key="frame" x="87" y="139" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="w4R-az-NiJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="VIEW REPORTS" id="cvX-19-Fun"/>
+                    <navigationItem key="navigationItem" id="o6h-ZG-icP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xM-zt-7Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3829" y="430"/>
+        </scene>
+        <!--ADD REPORTS-->
+        <scene sceneID="Nfa-nO-VSS">
+            <objects>
+                <viewController id="99T-5K-Kdf" customClass="AddEventController" customModule="techtogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dSA-ni-VeC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who needs help?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4x-0K-pI4">
+                                <rect key="frame" x="67" y="209" width="133" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXH-mi-6Wl">
+                                <rect key="frame" x="67" y="374" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description of Case" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCg-zD-1Nl">
+                                <rect key="frame" x="67" y="519" width="151" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Raw-3G-DX0">
+                                <rect key="frame" x="239" y="196" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMs-7F-5Bs">
+                                <rect key="frame" x="239" y="512" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnu-5T-Le6">
+                                <rect key="frame" x="153" y="673" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ask for Help"/>
+                                <connections>
+                                    <action selector="addEventPressed:" destination="99T-5K-Kdf" eventType="touchUpInside" id="aRY-yY-8nH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vuP-wO-zav">
+                                <rect key="frame" x="239" y="367" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="we4-QQ-XKb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ADD REPORTS" id="oMI-2c-ex3"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="dMs-7F-5Bs" id="kQM-GY-Klq"/>
+                        <outlet property="locationTextField" destination="vuP-wO-zav" id="SjB-x1-of4"/>
+                        <outlet property="nameTextField" destination="Raw-3G-DX0" id="4fx-t0-Jci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFS-TE-B4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3829" y="-224"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="3yt-ta-zpZ">
@@ -439,6 +535,6 @@
         <image name="location.fill" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h9b-oB-xef"/>
+        <segue reference="xw8-xK-le5"/>
     </inferredMetricsTieBreakers>
 </document>
