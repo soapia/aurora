@@ -25,7 +25,8 @@ class ContactRepsController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            hideKeyboardWhenTappedAround()
+
             repNameLabel.isHidden = true
             occupationLabel.isHidden = true
             politicalPartyLabel.isHidden = true

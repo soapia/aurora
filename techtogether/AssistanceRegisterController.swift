@@ -20,7 +20,9 @@ class AssistanceRegisterController: UIViewController {
     
     
     override func viewDidLoad() {
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Aurora.png")!)
+        hideKeyboardWhenTappedAround()
+
     }
     
     
@@ -39,7 +41,7 @@ class AssistanceRegisterController: UIViewController {
                         let userID = Auth.auth().currentUser?.uid
                         var ref : DatabaseReference!
                         ref = Database.database().reference().child("assistingUsers").child(userID!).child("personalInfo")
-                        let infoDict : [String : Any] = ["name" : self.nameTextField.text!, "occupation" : self.occupationTextField.text!]
+                        let infoDict : [String : Any] = ["name" : self.nameTextField.text!, "helpingOccupation" : self.occupationTextField.text!, "personalDescription" : ""]
                         ref.setValue(infoDict)
                         
                         self.performSegue(withIdentifier: "goToAssistanceHome", sender: self)

@@ -15,6 +15,10 @@ class AssistanceLoginController : UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Aurora.png")!)
+        hideKeyboardWhenTappedAround()
+
+//        super.viewDidLoad()
         
     }
     

@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController {
                 let userID = Auth.auth().currentUser?.uid
                 var ref : DatabaseReference!
                 ref = Database.database().reference().child("users").child(userID!).child("personalInfo")
-                let infoDict : [String : Any] = ["name" : self.fullNameTextField.text!]
+                let infoDict : [String : Any] = ["name" : self.fullNameTextField.text!, "occupation" : "", "personalDescription" : ""]
                 ref.setValue(infoDict)
                 
                 self.performSegue(withIdentifier: "goToHome", sender: self)

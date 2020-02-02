@@ -10,6 +10,65 @@ import UIKit
 import Firebase
 
 class SettingsViewController: UIViewController {
+    
+    var name = ""
+    var occupation = ""
+    var accountType = ""
+    
+    @IBOutlet weak var editInfoButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var occupationLabel: UILabel!
+
+    
+    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+                
+        occupationLabel.isHidden = false
+        
+        let userID = Auth.auth().currentUser?.uid
+        let userRef = Database.database().reference().child("users").child(userID!).child("personalInfo")
+        
+        userRef.observe(.value, with: { (snapshot) in
+        
+            let snapshotValue = snapshot.value as? [String: String] ?? [:]
+        
+            if snapshotValue["name"] != nil {
+                self.nameLabel.text = "Hello " + String(snapshotValue["name"]! + "!")
+                self.accountType = "primaryUser"
+                print(self.name)
+                if snapshotValue["occupation"] != nil && snapshotValue["occupation"] != ""{
+                    self.occupationLabel.text = String(snapshotValue["occupation"]!)
+                }
+                else {
+                    self.occupationLabel.isHidden = true
+                }
+
+            }
+            
+        })
+        let assistingUserRef = Database.database().reference().child("assistingUsers").child(userID!).child("personalInfo")
+                   
+                   assistingUserRef.observe(.value) { (snapshot) in
+                       let snapshotValue = snapshot.value as? [String: String] ?? [:]
+                       
+                       if snapshotValue["name"] != nil {
+                           self.name = "Hello, " + String(snapshotValue["name"]! + "!")
+                           self.accountType = "assistingUser"
+                           self.occupationLabel.text = "Occupation: " + String(snapshotValue["helpingOccupation"]!)
+                       }
+                       else {
+                           //an error has occurred
+                       }
+                   }
+        
+        
+    }
+
+    
+  
+    
     @IBAction func logOut(_ sender: Any) {
         do {
                try Auth.auth().signOut()
@@ -22,22 +81,5 @@ class SettingsViewController: UIViewController {
            let initial = storyboard.instantiateInitialViewController()
            UIApplication.shared.keyWindow?.rootViewController = initial
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
