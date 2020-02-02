@@ -32,7 +32,9 @@ class EventsController: UIViewController, UITableViewDelegate, UITableViewDataSo
         hideKeyboardWhenTappedAround()
 
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             print(reportArray.count)
             return reportArray.count
