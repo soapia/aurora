@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import Firebase
 
 
@@ -28,6 +29,7 @@ class AddEventController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }
+    
     
     @IBAction func addEventPressed(_ sender: UIButton) {
         
