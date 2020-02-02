@@ -15,7 +15,8 @@ class AddEventController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    
+    @IBOutlet weak var descriptionTextField: UITextView!
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = false

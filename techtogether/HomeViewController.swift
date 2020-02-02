@@ -23,10 +23,10 @@ class customPin: NSObject, MKAnnotation {
 
 class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
     
-    let data = Data().locations
+    let data = DataStore().locations
 //    var locData: [[String : Any]] = []
     var mapAnnotations = [customPin]()
-    var imageChoice = "pin.png"
+    var imageChoice = "pin"
     
     
     var locationManager = CLLocationManager()
@@ -62,14 +62,14 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             let name = dictionary["name"] as! String
             // let mediaURL = dictionary["mediaURL"] as! String
             let pin = customPin(pinTitle: name, pinSubTitle: "", location: coordinate)
-            print(pin)
+            //print(pin)
             mapAnnotations.append(pin)
-            print("LOOOOOOOOOK")
+            //print("LOOOOOOOOOK")
             self.mapView.addAnnotation(pin)
         }
         // print(mapAnnotations)
         self.mapView.addAnnotations(mapAnnotations)
-        imageChoice = "pin.png"
+        imageChoice = "pin"
     }
     var pinSelected = false
     var phoneNum = ""
@@ -129,7 +129,33 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             nothingSelected()
         }
     }
-    
+    func getCoordinate(name: String) -> Array<Any> {
+        var arr = [Double]()
+        for dict in data {
+            if dict["name"] as? String == name {
+                arr = [dict["latitude"], dict["longitude"]] as! [Double]
+            }
+        }
+        return arr
+    }
+    func getLink(name: String) -> String {
+        var lin = ""
+        for dict in data {
+            if dict["name"] as? String == name {
+                lin = dict["mediaURL"] as! String
+            }
+        }
+        return lin
+    }
+    func getPhone(name: String) -> String {
+        var num = ""
+        for dict in data {
+            if dict["name"] as? String == name {
+                num = dict["phoneNumber"] as! String
+            }
+        }
+        return num
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -157,6 +183,29 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         mapView.showsUserLocation = true
         addPlaces()
         // Do any additional setup after loading the view.
+    }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let place = view.annotation?.title!
+        // view.annotation?.title!.lines
+        print("annotation title == \(place!)")
+        if place != "My Location" {
+            pinSelected = true
+            phoneNum = getPhone(name: place!)
+            learnMore = getLink(name: place!)
+            locationTitle.text = place!
+            coordinateArray = getCoordinate(name: place!) as! [Double]
+            // getTheThings(name: place!)
+        }
+        print(phoneNum + " " + learnMore + " \(coordinateArray)")
+        // phoneNumber =
+    }
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        pinSelected = false
+        phoneNum = ""
+        learnMore = ""
+        coordinateArray.removeAll()
+        print("I was deselected!")
+        locationTitle.text = "Organizations Providing Assistance"
     }
     
     //MARK:- CLLocationManager Delegates
@@ -196,6 +245,19 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         present(alertPrompt, animated: true, completion: nil)
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            if annotation is MKUserLocation {
+                return nil
+            }
+    //        let rightButton = UIButton(type: .contactAdd)
+    //        rightButton.tag = annotation.hash
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "customannotation")
+            annotationView.image = UIImage(named: imageChoice)
+            annotationView.canShowCallout = true
+            // annotationView.rightCalloutAccessoryView = rightButton
+            return annotationView
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         if CLLocationManager.locationServicesEnabled() == true {

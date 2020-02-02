@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Data {
+class DataStore {
     let locations =  [
             ["name" : "New England Innocence Project",
              "latitude" : 42.356710,
