@@ -19,8 +19,21 @@ class StartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool){
      super.viewDidAppear(animated)
         if Auth.auth().currentUser != nil {
-            
-            self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+            var ref1 : DatabaseReference!
+            ref1 = Database.database().reference()
+            ref1.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+                if snapshot.hasChild(Auth.auth().currentUser!.uid){
+                    self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+                }
+            })
+            var ref2 : DatabaseReference!
+            ref2 = Database.database().reference()
+            ref2.child("assistingUsers").observeSingleEvent(of: .value, with: { (snapshot) in
+                if snapshot.hasChild(Auth.auth().currentUser!.uid){
+                    self.performSegue(withIdentifier: "alreadyLoggedInAssist", sender: nil)
+                }
+            })
+            // print(Auth.auth().currentUser?.uid)
         }
     }
 
