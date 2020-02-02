@@ -30,6 +30,7 @@
 		D9CBB80D23E635130058C4B6 /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CBB80C23E635130058C4B6 /* AddEventController.swift */; };
 		D9CBB80F23E638B50058C4B6 /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CBB80E23E638B50058C4B6 /* EventsController.swift */; };
 		D9CBB81123E639260058C4B6 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CBB81023E639260058C4B6 /* Report.swift */; };
+		D9CBB81323E642A10058C4B6 /* ContactRepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CBB81223E642A00058C4B6 /* ContactRepsController.swift */; };
 		FB9BF0D743636237CF0EBA32 /* Pods_techtogetherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A3EFAC55267D0CE66C68CE /* Pods_techtogetherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		D9CBB80C23E635130058C4B6 /* AddEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
 		D9CBB80E23E638B50058C4B6 /* EventsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		D9CBB81023E639260058C4B6 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		D9CBB81223E642A00058C4B6 /* ContactRepsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepsController.swift; sourceTree = "<group>"; };
 		E2A3EFAC55267D0CE66C68CE /* Pods_techtogetherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_techtogetherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				D92EF5B523E5D78800326A89 /* Aurora.png */,
 				D92EF5BB23E5E5A900326A89 /* logo.png */,
 				D92EF58623E5451500326A89 /* Main.storyboard */,
+				D9CBB81223E642A00058C4B6 /* ContactRepsController.swift */,
 				D9CBB80E23E638B50058C4B6 /* EventsController.swift */,
 				D9CBB81023E639260058C4B6 /* Report.swift */,
 				D9CBB80C23E635130058C4B6 /* AddEventController.swift */,
@@ -361,6 +364,7 @@
 				D92EF5BA23E5DB8500326A89 /* RoundButton.swift in Sources */,
 				D92EF5B023E558C700326A89 /* HomeViewController.swift in Sources */,
 				D92EF58B23E5451500326A89 /* techtogether.xcdatamodeld in Sources */,
+				D9CBB81323E642A10058C4B6 /* ContactRepsController.swift in Sources */,
 				D92EF5B423E5D2E900326A89 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
